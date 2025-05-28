@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -88,6 +90,7 @@
 body {
     background: var(--background);
     color: var(--foreground);
+    font-family: "Manrope", sans-serif;
 }
 
 .dark {
@@ -131,4 +134,20 @@ body {
     body {
         @apply bg-background text-foreground;
     }
+}
+
+/* custom */
+body {
+    background: linear-gradient(
+        45deg,
+        #c428d236,
+        #c428d236,
+        #ffffff,
+        #ffffff,
+        #ffffff,
+        #14ff8e1a,
+        #14ff8e1a
+    );
+    min-height: 100vh;
+    @apply md:overflow-y-hidden;
 }

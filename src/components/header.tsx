@@ -20,12 +20,12 @@ export default function Header(props: {
   borrowCategory: string;
 }) {
   return (
-    <header className="h-[65px] my-5">
-      <div className="h-full w-full gap-10 max-w-[900px] mx-auto flex items-center justify-between">
-        <div className="bg-gradient-to-tl from-orange-500 to bg-orange-300 text-white px-5 flex items-center justify-center rounded-md h-[65px]">
-          <p className="font-bold text-2xl">BRRWR</p>
+    <header className="h-[65px]">
+      <div className="mt-5 h-full px-5 w-full gap-10 max-w-[900px] mx-auto flex items-center justify-between">
+        <div className="bg-gradient-to-tl from-orange-500 to bg-orange-300 text-white px-5 flex items-center justify-center rounded-md h-[50px] md:h-[65px]">
+          <p className="font-bold md:text-2xl">BRRWR</p>
         </div>
-        <div className="bg-[#ffffff99] flex justify-between px-5 items-center gap-5 rounded-md w-full h-full">
+        <div className="bg-[#ffffffe0] md:flex justify-between px-5 items-center gap-5 rounded-md w-full h-full hidden">
           <Select
             onValueChange={props.onBorrowCategoryChange}
             value={props.borrowCategory}
@@ -55,7 +55,7 @@ export default function Header(props: {
             </Button>
           </div>
         </div>
-        <div className="bg-[#ffffff99] flex items-center gap-5 px-5 h-full rounded-md">
+        <div className="bg-[#ffffffe0] flex items-center gap-5 px-5 h-full rounded-md">
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline" className="bg-white" size="icon">
