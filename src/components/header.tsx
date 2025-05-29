@@ -3,17 +3,18 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { HEADER_MENU_OPTS, HEADER_SELECT_OPTS } from "@/lib/content";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { Box, ExternalLink, MenuIcon, Star } from "lucide-react";
+import Link from "next/link";
+import { Button } from "./ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { HEADER_MENU_OPTS, HEADER_SELECT_OPTS } from "@/lib/content";
-import { Box, ExternalLink, MenuIcon, Star, WindIcon } from "lucide-react";
-import Link from "next/link";
-import { Button } from "./ui/button";
+} from "./ui/select";
 
 export default function Header(props: {
   onBorrowCategoryChange: (category: string) => void;
@@ -25,7 +26,7 @@ export default function Header(props: {
         <div className="bg-gradient-to-tl from-orange-500 to bg-orange-300 text-white px-5 flex items-center justify-center rounded-md h-[50px] md:h-[65px]">
           <p className="font-bold md:text-2xl">BRRWR</p>
         </div>
-        <div className="bg-[#ffffffe0] md:flex justify-between px-5 items-center gap-5 rounded-md w-full h-full hidden">
+        <div className="bg-[#ffffffe0] md:flex justify-center items-center rounded-md gap-3 h-full hidden">
           <Select
             onValueChange={props.onBorrowCategoryChange}
             value={props.borrowCategory}
@@ -41,21 +42,20 @@ export default function Header(props: {
               ))}
             </SelectContent>
           </Select>
-          <div className="flex items-center gap-2">
-            <Button variant="outline" className="bg-white">
-              <Star className="text-pink-700" />
-              132
-            </Button>
-            <Button variant="outline" className="bg-white">
-              <Box className="text-pink-700" /> $19.32
-            </Button>
-            <Button variant="outline" className="bg-white">
-              <WindIcon className="text-pink-700" />
-              My points
-            </Button>
-          </div>
+          <Button variant="outline" className="bg-white">
+            <Star className="text-pink-700" />
+            132
+          </Button>
+          <Button variant="outline" className="bg-white">
+            <Box className="text-pink-700" /> $19.32
+          </Button>
         </div>
         <div className="bg-[#ffffffe0] flex items-center gap-5 px-5 h-full rounded-md">
+          <ConnectButton
+            label="Login to account"
+            accountStatus="avatar"
+            showBalance={false}
+          />
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline" className="bg-white" size="icon">
