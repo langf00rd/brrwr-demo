@@ -2,7 +2,10 @@ import { CenterBolt } from "@/lib/icons";
 import { motion } from "motion/react";
 import TokenConverter from "./token-converter";
 
-export default function Borrow(props: { borrowCategory: string }) {
+export default function Borrow(props: {
+  borrowCategory: string;
+  contractName?: string;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -10,7 +13,7 @@ export default function Borrow(props: { borrowCategory: string }) {
       className="space-y-3"
     >
       <h1 className="text-[1.5rem] md:text-[2rem] font-medium">
-        {props.borrowCategory}
+        {props.borrowCategory} ({props.contractName})
       </h1>
       <div className="bg-[#E9E9F3] p-1 space-y-1 rounded-md">
         <div className="bg-white relative p-5 rounded-md md:px-10 py-10">

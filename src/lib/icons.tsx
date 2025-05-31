@@ -22,9 +22,9 @@ export function CenterBolt() {
           width="84"
           height="84"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -58,8 +58,8 @@ export function CenterBolt() {
           y2="45.3673"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FA43BD"></stop>
-          <stop offset="1" stop-color="#FFA930"></stop>
+          <stop stopColor="#FA43BD"></stop>
+          <stop offset="1" stopColor="#FFA930"></stop>
         </linearGradient>
       </defs>
     </svg>

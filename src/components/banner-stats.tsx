@@ -1,7 +1,11 @@
-export default function BannerStats() {
+export default function BannerStats(props: { totalSupply: number }) {
   return (
     <div className="hidden md:flex justify-end">
       <div className="bg-[#ffffffe0] gap-5 w-max flex items-center p-2 px-5 rounded-md">
+        <div className="border-r pr-5">
+          <span className="text-neutral-500">Total Supply:</span>
+          <span className="font-semibold"> {props.totalSupply}</span>
+        </div>
         <div className="border-r pr-5">
           <span className="text-neutral-500">TVL:</span>
           <span className="font-semibold">$3.077B</span>

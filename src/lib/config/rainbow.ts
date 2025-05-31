@@ -3,7 +3,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { mainnet } from "wagmi/chains";
 
 export const config = getDefaultConfig({
-  appName: "My RainbowKit App",
+  appName: "brrwr app",
   projectId: "YOUR_PROJECT_ID",
   chains: [mainnet],
 });
